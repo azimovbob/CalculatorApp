@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.NumberFormatException
 
@@ -122,6 +123,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun buttonNegClicked(view: View) {
+
         if(newNumber.text.isEmpty()){
             newNumber.append("-")
         }
@@ -135,6 +137,25 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+    }
+
+    fun buttonClrClicked(view: View) {
+        if(operand1==null){
+            if(newNumber.text.isNotEmpty()){
+                newNumber.setText("")
+            }
+        }else{
+            operand1=null
+            newNumber.setText("")
+            result.setText("")
+        }
+        //newNumber.setText("")
+        pendingOperand="="
+        //operand1=null
+
+
+        displayOperation.text=""
+
     }
 
 

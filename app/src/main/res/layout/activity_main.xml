@@ -214,4 +214,16 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonDivide"
         app:layout_constraintStart_toEndOf="@+id/buttonDivide" />
 
+    <Button
+        android:id="@+id/buttonClr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dp"
+        android:text="AC"
+        android:onClick="buttonClrClicked"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonMultiple"
+        app:layout_constraintEnd_toEndOf="@+id/buttonNeg"
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiple" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
